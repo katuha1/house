@@ -19,27 +19,49 @@
             <a href="#home">Главная</a>
             <a href="#about">О нас</a>
             <a href="#product">Недвижимость</a>
-            <a href="#">Новости</a>
+            <a href="#new">Новости</a>
             <a href="#">Ипотека</a>
             <button>Вход/Регистрация</button>
         </nav>
     </div>
+
+    <!-- бугер -->
+
+    <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+            <span></span>
+        </label>
+        <ul class="menu__box">
+            <li><a class="menu__item" href="#">Главная</a></li>
+            <li><a class="menu__item" href="#">Проекты</a></li>
+            <li><a class="menu__item" href="#">Команда</a></li>
+            <li><a class="menu__item" href="#">Блог</a></li>
+            <li><a class="menu__item" href="#">Контакты</a></li>
+        </ul>
+    </div>
     <section class="home" id="home">
         <div class="home-content">
-            <h1>Открой для себя место, <br>
-                где вам понравится жить</h1>
-            <p>Свяжись с более чем 75 миллионами арендаторов,<br>
-                которые ищут новое жильё используя нашу <br>
-                комплексную маркетинговую платформу.</p>
+            <div class="home-content-text">
+                <h1>Открой для себя место, <br>
+                    где вам понравится жить</h1>
+                <p>Свяжись с более чем 75 миллионами арендаторов,
+                    которые ищут новое жильё используя нашу
+                    комплексную маркетинговую платформу.</p>
+            </div>
             <div class="filter">
 
             </div>
             <div class="num">
-                <h1>1500+</h1>
-                <p>Варианов <br>недвижимости</p>
-                <div class="line"></div>
-                <h1>500+</h1>
-                <p>Счастливых <br>клиентов</p>
+                <div class="str">
+                    <h1>1500+</h1>
+                    <p>Варианов недвижимости</p>
+                </div>
+                <div class="line-num"></div>
+                <div class="str">
+                    <h1>500+</h1>
+                    <p>Счастливых клиентов</p>
+                </div>
             </div>
         </div>
     </section>
@@ -57,47 +79,357 @@
             <div class="container-block-about">
                 <div class="block-about">
                     <img src="images/house.png">
-                    <h3>Найдите дом своей мечты</h3>
-                    <p>Множество объявлений о продаже<br> квартир и домов в разных местах.<br> Коснитесь пальцем экрана,
-                        а затем <br>откройте дверь дома своей мечты<br> прямо отсюда.</p>
+                    <div>
+                        <h3>Найдите дом своей мечты</h3>
+                        <p>Множество объявлений о продаже квартир и домов в разных местах. Коснитесь пальцем экрана,
+                            а затем откройте дверь дома своей мечты прямо отсюда.</p>
+                    </div>
                 </div>
                 <div class="block-about">
                     <img src="images/time.png">
-                    <h3>Найдите место работы</h3>
-                    <p>Арендовать коммерческое помещение, а также покупать и продавать торговые помещения
-                        становится проще.</p>
+                    <div>
+                        <h3>Найдите место работы</h3>
+                        <p>Арендовать коммерческое помещение, а также покупать и продавать торговые помещения
+                            становится проще.</p>
+                    </div>
                 </div>
                 <div class="block-about">
                     <img src="images/func.png">
-                    <h3>Многофункциональность</h3>
-                    <p>Существует 900 тысяч объявлений о недвижимости.
-                        Все, что вы можете изучить и спланировать, используя интеллектуальные функции, такие как ипотека
-                        Калькулятор.</p>
+                    <div>
+                        <h3>Многофункциональность</h3>
+                        <p>Существует 900 тысяч объявлений о недвижимости.
+                            Все, что вы можете изучить и спланировать, используя интеллектуальные функции, такие как
+                            ипотека
+                            Калькулятор.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="product" id="product">
-        <p>НЕДВИЖИМОСТЬ</p>
-        <div class="text-product-eyes">
-            <h1>Новые предложения <br>
-                на HOMEIncity</h1>
-            <button class="product-eyes">Просмотреть <img src="images/arrow.png" alt=""></button>
-        </div>
-        <div class="container-block-product">
-            <div class="block-product">
-                <div class="ph-product">
-                    <img src="images/like.png" alt="">
-                </div>
-                 
+    <div class="product-bg">
+        <div class="product" id="product">
+            <p>НЕДВИЖИМОСТЬ</p>
+            <div class="text-product-eyes">
+                <h1>Новые предложения <br>
+                    на HOMEIncity</h1>
+                <button class="product-eyes">
+                    <p>Просмотреть</p>
+                    <img src="images/arrow.png" alt="">
+                </button>
             </div>
-            <div class="block-product"></div>
-            <div class="block-product"></div>
-            <div class="block-product"></div>              
+            <div class="container-block-product">
+                <div class="block-product">
+                    <div class="ph-product">
+                        <picture>
+                            <source srcset="images/ph1-product.png" media="(orientation: portrait)">
+                            <img src="images/ph1-product.png" alt="">
+                        </picture>
+                        <div class="circle-like">
+                            <img src="images/like.png" alt="">
+                        </div>
+                    </div>
+                    <div class="room">
+                        <div class="room1">
+                            <p>2-комнт.</p>
+                        </div>
+                        <div class="room1">
+                            <p>договорная</p>
+                        </div>
+                    </div>
+                    <h2>7,500,000Р</h2>
+                    <div class="address">
+                        <p>Московская обл., Химки, квартал Ивакино
+                            МЦД Хлебниково</p>
+                    </div>
+                    <div class="comments">
+                        <div class="line-comments"></div>
+                        <div class="comments-flex">
+                            <div class="circle-comments">
+                                <img src="images/bed.png">
+                            </div>
+                            <p>с мебелью</p>
+                            <div class="circle-comments">
+                                <img src="images/human.png">
+                            </div>
+                            <p>2 этажа</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="block-product">
+                    <div class="ph-product">
+                        <picture>
+                            <source srcset="images/ph2-product.png" media="(orientation: portrait)">
+                            <img src="images/ph2-product.png" alt="">
+                        </picture>
+                        <div class="circle-like">
+                            <img src="images/like.png" alt="">
+                        </div>
+                    </div>
+                    <div class="room">
+                        <div class="room1">
+                            <p>4-комнт.</p>
+                        </div>
+                        <div class="room1">
+                            <p>договорная</p>
+                        </div>
+                    </div>
+                    <h2>14,000,000Р</h2>
+                    <div class="address">
+                        <p>«пер. Долгий 6» - 48-квартирный жилой дом с индивидуальным газовым....</p>
+                    </div>
+                    <div class="comments">
+                        <div class="line-comments"></div>
+                        <div class="comments-flex">
+                            <div class="circle-comments">
+                                <img src="images/bed.png">
+                            </div>
+                            <p>без мебелью</p>
+                            <div class="circle-comments">
+                                <img src="images/bath.png">
+                            </div>
+                            <p>2 ванны</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="block-product">
+                    <div class="ph-product">
+                        <picture>
+                            <source srcset="images/ph3-product.png" media="(orientation: portrait)">
+                            <img src="images/ph3-product.png" alt="">
+                        </picture>
+                        <div class="circle-like">
+                            <img src="images/like.png" alt="">
+                        </div>
+                    </div>
+                    <div class="room">
+                        <div class="room1">
+                            <p>1-комнт.</p>
+                        </div>
+                        <div class="room1">
+                            <p>договорная</p>
+                        </div>
+                    </div>
+                    <h2>4,000,000Р</h2>
+                    <div class="address">
+                        <p>Жилой комплекс "Дипломат" состоит из двух 5-этажных домов комфорт класса</p>
+                    </div>
+                    <div class="comments">
+                        <div class="line-comments"></div>
+                        <div class="comments-flex">
+                            <div class="circle-comments">
+                                <img src="images/bed.png">
+                            </div>
+                            <p>без мебелью</p>
+                            <div class="circle-comments">
+                                <img src="images/bath.png">
+                            </div>
+                            <p>1 ванна</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="block-product">
+                    <div class="ph-product4">
+                        <picture>
+                            <source srcset="images/ph4-product.png" media="(orientation: portrait)">
+                            <img src="images/ph4-product.png" alt="">
+                        </picture>
+                        <div class="circle-like">
+                            <img src="images/like.png" alt="">
+                        </div>
+                    </div>
+                    <div class="room">
+                        <div class="room1">
+                            <p>1-комнт.</p>
+                        </div>
+                        <div class="room1">
+                            <p>снять</p>
+                        </div>
+                    </div>
+                    <h2>25,000Р/мес.</h2>
+                    <div class="address">
+                        <p>Дом по ул. Архангельская представляет собой 5-секционное кирпичное здание</p>
+                    </div>
+                    <div class="comments">
+                        <div class="line-comments"></div>
+                        <div class="comments-flex">
+                            <div class="circle-comments">
+                                <img src="images/bed.png">
+                            </div>
+                            <p>с мебелью</p>
+                            <div class="circle-comments">
+                                <img src="images/bath.png">
+                            </div>
+                            <p>1 ванна</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
+    <div class="new" id="new">
+        <p class="new-p">НОВОСТИ</p>
+        <div class="text-new-eyes">
+            <h1>Статьи связанные с эстетическим <br>
+                дизайном в доме</h1>
+            <button class="new-eyes">
+                <p>Перейти к блогу
+                <p>
+                    <img src="images/arrow.png">
+            </button>
+        </div>
+        <div class="new-block">
+            <div class="new-block1">
+                <div class="wrapper-image">
+                    <img src="images/ph1-new.png" class="image">
+                </div>
+                <div class="text-new">
+                    <p>Апрель 20, 2023</p>
+                    <h3>Вы сэкономите время и деньги на декорировании методом проб и ошибок.</h3>
+                    <p>Знание эстетики вашего дома означает, что вы получаете доступ к многолетнему изучению дизайна
+                        интерьера профессиональными декораторами. Больше не нужно проверять...
+                    </p>
+                </div>
+            </div>
+            <div class="new-block2">
+                <div class="new-podblock">
+                    <div class="wrapper-image">
+                        <img src="images/ph2-new.png" class="image">
+                    </div>
+                    <div class="div">
+                        <p>Май 30, 2023</p>
+                        <h3>Нам нравится гибкость настенного декора
+                            в рамках этой эстетики.
+                            Богемная эстетика, в основе которой лежит персонализация, - это лавина аксессуаров
+                            эстетика
+                            формируется не просто так и ...</h3>
+                    </div>
+                </div>
+                <div class="new-podblock">
+                    <div class="wrapper-image">
+                        <img src="images/ph3-new.png" class="image">
+                    </div>
+                    <div class="div">
+                        <p>Июнь 2, 2023</p>
+                        <h3>Эстетика современного дома - это "знай это".
+                            когда вы это увидите" стиль. Все же, эстетика формируется не просто так и в каждом
+                            интерьере она своя, потому что хозяева разные. </h3>
+                    </div>
+                </div>
+                <div class="new-podblock">
+                    <div class="wrapper-image">
+                        <img src="images/ph4-new.png" class="image">
+                    </div>
+                    <div class="div">
+                        <p>Апрель 19, 2023</p>
+                        <h3>Богемный декор - один из самых популярных в домашней эстетике, и это
+                            неудивительно. На первый взгляд кажется, что бохо — это лавина аксессуаров, друг с
+                            другом не связанных. Но это не так...</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-flex">
+            <div class="footer1">
+                <div class="logo">
+                    <img src="images/logo.png" alt="logo">
+                    <p>HOME<br>Incity</p>
+                </div>
+                <p class="quote">Сделано для вашего удобства
+                    для более прекрасного будущего
+                    для вас и вашей семьи</p>
+                <div class="phone">
+                    <img src="images/phone.png">
+                    <p>500-892</p>
+                </div>
+            </div>
+            <div class="footer2">
+                <div class="menu">
+                    <h4>Меню</h4>
+                    <div class="podmenu">
+                        <p>Главная</p>
+                        <p>Управление</p>
+                        <p>Цены</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer2">
+                <div class="menu">
+                    <h4>Лучший выбор</h4>
+                    <div class="podmenu">
+                        <p>Минималистический</p>
+                        <p>Классический</p>
+                        <p>Традиционный</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer2">
+                <div class="menu">
+                    <h4>Услуги</h4>
+                    <div class="podmenu">
+                        <p>Частые вопросы</p>
+                        <p>Как мы работаем</p>
+                        <p>Безопасность</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer2">
+                <div class="menu">
+                    <h4>О нас</h4>
+                    <div class="podmenu">
+                        <p>Карьера</p>
+                        <p>Преимущества</p>
+                        <p>Новости и блог</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer2">
+                <div class="menu">
+                    <h4>Соц. сети</h4>
+                    <div class="podmenu">
+                        <p>Вк</p>
+                        <p>Инстаграм</p>
+                        <p>Телеграмм</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- адаптив -->
+        <div class="wrapper-footer">
+            <div class="logo-flex">
+                <div class="logo">
+                    <img src="images/logo.png" alt="logo">
+                    <p>HOME<br>Incity</p>
+                </div>
+            </div>
+            <div class="wrapper-mobile">
+                <div class="menu-mobile">
+                    <p>Меню</p>
+                    <p>Лучший выбор</p>
+                    <p>Услуги</p>
+                    <p>О нас</p>
+                    <p>Соц. сети</p>
+                </div>
+                <div class="contact">
+                    <p class="contact-p">Наше мобильное приложение</p>
+                    <div class="contact-app">
+                        <img src="images/google.png" alt="">
+                        <img src="images/appstore.png" alt="">
+                    </div>
+                    <div>
+                        <p class="number-p">Контактный номер</p>
+                        <p class="number-phone">500-892</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>2023 © HOME Incity</p>
+        </div>
+    </footer>
 </body>
 
 </html>
