@@ -1,0 +1,1139 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    color: #000000;
+}
+
+html,
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    scroll-behavior: smooth;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+    user-select: none;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* шапка */
+
+.bg_menu {
+    position: relative;
+    background-color: #ffffff;
+    box-shadow: 0px 11px 14px 0px rgba(34, 60, 80, 0.2);
+    border-radius: 0 0 10px 10px;
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    padding: 1rem 4.5%;
+}
+
+nav a:hover {
+    color: #7FB9DF;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    padding-right: 1rem;
+    margin-right: 1rem;
+    width: 100px;
+    border-right: 1px solid #000000;
+}
+
+nav button {
+    color: #fff;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    ;
+    background-color: #000000;
+    padding: 0.4rem 0.8rem;
+    border-radius: 60px;
+    transition: 0.4s;
+}
+
+nav button:hover {
+    background-color: #fff;
+    border: 2px #7FB9DF solid;
+    color: #7FB9DF;
+}
+
+@media screen and (max-width: 955px) {
+    a {
+        font-size: 13px;
+    }
+
+    nav button {
+        color: #fff;
+        font-size: 13px;
+        background-color: #000000;
+        padding: 0.4rem 0.8rem;
+        border-radius: 60px;
+        transition: 0.4s;
+    }
+
+    .logo img {
+        padding-right: 1rem;
+        margin-right: 1rem;
+        width: 80px;
+        border-right: 1px solid #000000;
+    }
+
+    .logo p {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 824px) {
+    nav {
+        padding: 1rem 8% 0;
+    }
+
+    a {
+        display: none;
+    }
+
+    nav button {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: inline;
+    }
+
+    #menu__toggle {
+        opacity: 0;
+    }
+
+    #menu__toggle:checked~.menu__btn>span {
+        transform: rotate(45deg);
+    }
+
+    #menu__toggle:checked~.menu__btn>span::before {
+        top: 0;
+        transform: rotate(0);
+    }
+
+    #menu__toggle:checked~.menu__btn>span::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+
+    #menu__toggle:checked~.menu__box {
+        z-index: 100;
+        visibility: visible;
+    }
+
+    .menu__btn {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 28px;
+        right: 20px;
+
+        width: 26px;
+        height: 26px;
+
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    .menu__btn>span,
+    .menu__btn>span::before,
+    .menu__btn>span::after {
+        display: block;
+        position: absolute;
+
+        width: 100%;
+        height: 2px;
+
+        background-color: #616161;
+
+        transition-duration: .25s;
+    }
+
+    .menu__btn>span::before {
+        content: '';
+        top: -8px;
+    }
+
+    .menu__btn>span::after {
+        content: '';
+        top: 8px;
+    }
+
+    .menu__box {
+        display: block;
+        position: fixed;
+        visibility: hidden;
+        top: 0;
+        right: 0;
+
+        width: 300px;
+
+        margin: 0;
+        padding: 30px 0;
+
+        list-style: none;
+
+        background-color: #c5e8ff;
+        box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+
+        transition-duration: .25s;
+    }
+
+    .menu__item {
+        display: block;
+        padding: 12px 24px;
+
+        color: #333;
+
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+
+        text-decoration: none;
+
+        transition-duration: .25s;
+    }
+
+    .menu__item:hover {
+        background-color: #CFD8DC;
+    }
+}
+
+/* Фильтры */
+
+.form {
+    padding: 0 4.5% 1rem;
+    display: flex;
+    align-items: center;
+
+}
+
+.form input,
+select {
+    width: 8rem;
+    height: 2rem;
+    margin-left: 5px;
+    border: 1px solid #B9B9B9;
+    background-color: #fff;
+    border-radius: 8px;
+    font-size: 18px;
+    text-align: center;
+    outline: none;
+}
+
+.search {
+    display: inline-flex;
+    border: 1px solid #B9B9B9;
+    border-radius: 8px;
+    margin-left: 5px;
+    align-items: center;
+    width: 90rem;
+}
+
+.search svg {
+    margin-left: 5px;
+}
+
+.search-field {
+    width: 12rem !important;
+    border: none !important;
+}
+
+/* Объявления  */
+.wrapper_ad {
+    background-color: #F4F4F4;
+    height: 1475px;
+}
+
+.ad {
+    margin: 0rem 4.5%;
+}
+
+.ad_sorting {
+    padding: 1rem 0;
+}
+
+.ad_sorting p {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.ad_sorting select {
+    width: 10rem;
+    margin: 0 !important;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+
+.ad_apartment {
+    display: flex;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1rem;
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.img_bg {
+    background: url("images/image1.png");
+    border-radius: 10px;
+    background-size: cover;
+    width: 100%;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img_bg:after {
+    content: '';
+    background: rgba(158, 158, 158, 0.7);
+    display: block;
+    position: absolute;
+    width: 158px;
+    height: 100px;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.title {
+    color: #fff;
+    z-index: 2;
+    line-height: 3rem;
+    text-align: center;
+}
+
+.apartment_photo {
+    margin-right: 1rem;
+}
+
+.apartment_photo img {
+    border-radius: 10px;
+}
+
+.photo_top img {
+    margin-bottom: 0.5rem;
+}
+
+.photo_bottom {
+    display: flex;
+}
+
+.photo_bottom img:not(:last-child) {
+    margin-right: 0.7rem;
+}
+
+.apartment_inf {
+    margin-left: 1rem;
+}
+
+.room {
+    font-size: 22px;
+    color: #7FB9DF;
+    font-weight: bold;
+    margin-bottom: 0.7rem;
+}
+
+.adress {
+    font-size: 16px;
+    margin-bottom: 1.5rem;
+}
+
+.sum {
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.podzal {
+    font-size: 12px;
+}
+
+.time {
+    display: flex;
+    margin-top: 1.5rem;
+}
+
+.time p {
+    color: #616161;
+    font-size: 14px;
+    margin-left: 0.5rem;
+}
+
+.sign {
+    font-size: 14px;
+    color: #616161;
+    position: absolute;
+    bottom: 1rem;
+    width: 450px;
+    text-align: justify;
+}
+
+.ph {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+}
+
+.adaptive_wrapper {
+    display: flex;
+}
+
+.apartament_person {
+    position: absolute;
+    right: 1rem;
+}
+
+.person p {
+    font-size: 16px;
+    margin: 0.5rem 0;
+}
+
+.connect {
+    display: flex;
+    flex-direction: column;
+}
+
+.phone_person {
+    background-color: #7FB9DF;
+    border-radius: 10px;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    width: 180px;
+    height: 36px;
+}
+
+.phone_person p {
+    color: #fff;
+    font-size: 14px;
+}
+
+.mess {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 0.5rem;
+    border: 1px solid #B9B9B9;
+    width: 180px;
+}
+
+.mess p {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.apartament_person svg {
+    position: absolute;
+    right: 0rem;
+    top: 0rem;
+    width: 30px;
+}
+
+@media screen and (max-width: 1240px) {
+
+    .photo_bottom img,
+    .img_bg {
+        width: 125px;
+    }
+
+    .photo_top img {
+        width: 400px;
+        margin-bottom: 0.3rem;
+    }
+
+    .img_bg:after {
+        width: 125px;
+        height: 79.11px;
+    }
+
+    .room {
+        font-size: 20px;
+    }
+
+    .adress {
+        font-size: 14px;
+    }
+
+    .sum {
+        font-size: 28px;
+    }
+
+    .podzal {
+        font-size: 10px;
+    }
+
+    .time {
+        display: flex;
+        align-items: center;
+        margin-top: 1.5rem;
+    }
+
+    .time p {
+        color: #616161;
+        font-size: 12px;
+        margin-left: 0.5rem;
+    }
+
+    .sign {
+        font-size: 12px;
+        color: #616161;
+        position: absolute;
+        bottom: 1rem;
+        width: 450px;
+        text-align: justify;
+    }
+
+    .title {
+        font-size: 14px;
+    }
+
+    .person p {
+        font-size: 14px;
+    }
+
+    .wrapper_ad {
+        height: 1235px;
+    }
+
+    .form input,
+    select {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1070px) {
+    .apartment_inf {
+        margin-left: 0.7rem;
+    }
+
+    .apartment_photo {
+        margin-right: 0rem;
+    }
+
+    .photo_bottom img,
+    .img_bg {
+        width: 95px;
+    }
+
+    .photo_bottom img:not(:last-child) {
+        margin-right: 0.4rem;
+    }
+
+    .photo_top img {
+        width: 300px;
+        margin-bottom: 0rem;
+    }
+
+    .img_bg:after {
+        width: 95px;
+        height: 60px;
+    }
+
+    .room {
+        font-size: 18px;
+    }
+
+    .adress {
+        font-size: 12px;
+    }
+
+    .sum {
+        font-size: 20px;
+    }
+
+    .podzal {
+        font-size: 10px;
+    }
+
+    .time {
+        margin-top: 1rem;
+    }
+
+    .time img {
+        width: 18px;
+    }
+
+    .time p {
+        color: #616161;
+        font-size: 12px;
+        margin-left: 0.5rem;
+    }
+
+    .sign {
+        font-size: 10px;
+        bottom: 1rem;
+        width: 350px;
+    }
+
+    .title {
+        font-size: 12px;
+    }
+
+    .person p {
+        font-size: 12px;
+    }
+
+    .wrapper_ad {
+        height: 970px;
+    }
+
+    .form input,
+    select {
+        font-size: 13px;
+    }
+
+    .ad_apartment {
+        margin-bottom: 1rem;
+    }
+
+    .ph {
+        width: 40px;
+        height: 40px;
+    }
+
+    .ph p {
+        font-size: 14px;
+    }
+
+    .phone_person {
+        width: 150px;
+        height: 30px;
+    }
+
+    .phone_person p {
+        font-size: 12px;
+    }
+
+    .mess {
+        width: 150px;
+        height: 30px;
+    }
+
+    .mess p {
+        font-size: 12px;
+    }
+
+    .ad_sorting select {
+        width: 8rem;
+        font-size: 14px;
+    }
+
+    .ad_sorting p {
+        font-size: 18px;
+    }
+
+    .apartament_person svg {
+        width: 25px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .form {
+        display: none;
+    }
+
+    .sign {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 890px) {
+    .adaptive_wrapper {
+        position: relative;
+    }
+
+    .apartament_person {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        bottom: 0;
+        left: 0.7rem;
+    }
+
+    .person p {
+        margin-right: 1rem;
+    }
+
+    .ph {
+        display: none;
+    }
+
+    .phone_person {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        width: 135px;
+        height: 25px;
+        border-radius: 7px;
+    }
+
+    .phone_person p {
+        font-size: 12px;
+    }
+
+    .mess {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        width: 135px;
+        height: 25px;
+        border-radius: 7px;
+    }
+
+    .mess p {
+        position: absolute;
+        margin-left: 1.8rem;
+    }
+
+    .apartament_person svg {
+        display: none;
+    }
+
+    .room {
+        font-size: 16px;
+    }
+
+    .adress {
+        font-size: 10px;
+        margin-bottom: 1rem;
+    }
+
+    .sum {
+        font-size: 18px;
+    }
+
+    .podzal {
+        font-size: 8px;
+    }
+
+    .time {
+        margin-top: 0.5rem;
+    }
+
+    .time img {
+        width: 15px;
+    }
+}
+
+@media screen and (max-width: 683px) {
+    .wrapper_ad {
+        height: 860px;
+    }
+
+    .photo_top img {
+        width: 250px;
+    }
+
+    .photo_bottom img,
+    .img_bg {
+        width: 78.5px;
+    }
+
+    .img_bg:after {
+        width: 78.5px;
+        height: 54px;
+    }
+
+    .title {
+        font-size: 10px;
+    }
+
+    .person p {
+        font-size: 10px;
+    }
+
+    .phone_person {
+        width: 106px;
+        height: 20px;
+    }
+
+    .phone_person p {
+        font-size: 10px;
+    }
+
+    .mess {
+        width: 106px;
+        height: 20px;
+    }
+
+    .mess p {
+        font-size: 10px;
+        margin-left: 1.3rem;
+    }
+
+    .ad_sorting p {
+        font-size: 13px;
+    }
+
+    .ad_sorting select {
+        font-size: 13px;
+        height: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .wrapper_ad {
+        height: 1558px;
+    }
+
+    .ad_apartment {
+        display: block;
+        width: 100%;
+    }
+
+    .photo_bottom img,
+    .img_bg {
+        display: none;
+    }
+
+    .photo_top img {
+        width: 100%;
+    }
+
+    .title {
+        font-size: 15px;
+        color: #000;
+    }
+
+    .adaptive_wrapper {
+        display: flex;
+    }
+
+    .apartament_person {
+        display: block;
+        left: auto
+    }
+
+    .apartment_inf {
+        margin-left: 0rem;
+        width: 65%;
+    }
+
+    .room {
+        font-size: 20px;
+        margin-bottom: 0.2rem;
+    }
+
+    .adress {
+        font-size: 14px;
+        margin-bottom: 1rem;
+    }
+
+    .sum {
+        font-size: 20px;
+    }
+
+    .podzal {
+        font-size: 12px;
+    }
+
+    .time {
+        margin-top: 1rem;
+    }
+
+    .time p {
+        font-size: 14px;
+    }
+
+    .adaptive_wrapper {
+        margin-top: 0.5rem;
+    }
+
+    .apartament_person {
+        top: 0;
+        right: 0;
+    }
+
+    .person p {
+        font-size: 13px;
+    }
+
+    .person p:first-child {
+        margin-top: 0;
+    }
+
+    .form input,
+    select {
+        font-size: 13px;
+    }
+
+    .ad_apartment {
+        margin-bottom: 1rem;
+    }
+
+    .phone_person {
+        width: 135px;
+        height: 28px;
+    }
+
+    .phone_person p {
+        font-size: 13px;
+    }
+
+    .mess {
+        width: 135px;
+        height: 28px;
+    }
+
+    .mess p {
+        font-size: 13px;
+        margin-left: 1.6rem;
+    }
+
+    .ad_sorting p {
+        font-size: 15px;
+    }
+}
+
+
+@media screen and (max-width: 445px) {
+    .wrapper_ad {
+        height: 1330px;
+    }
+    .apartament_person {
+        display: none;
+    }
+
+    .apartment_inf {
+        width: 100%;
+    }
+}
+
+/* подвал */
+.wrapper-footer {
+    display: none;
+}
+
+footer {
+    background-color: #EEF8FF;
+    min-height: 318px;
+    width: 100%;
+    padding: 3rem 5%;
+}
+
+.footer1 {
+    max-width: 350px;
+}
+
+.quote {
+    margin-top: 1rem;
+}
+
+.phone {
+    display: flex;
+    margin-top: 1rem;
+    align-items: center;
+}
+
+.phone p {
+    margin-left: 0.7rem;
+}
+
+.footer-flex {
+    display: flex;
+}
+
+.menu {
+    margin-left: 5.5rem;
+}
+
+.menu h4 {
+    margin-bottom: 1.5rem;
+}
+
+.podmenu p {
+    padding-bottom: 0.8rem;
+}
+
+.copyright p {
+    text-align: center;
+    font-size: 16px;
+    padding-top: 1rem;
+}
+
+@media screen and (max-width: 1672px) {
+    .quote {
+        font-size: 16px;
+    }
+
+    .phone p {
+        font-size: 16px;
+    }
+
+    .menu p,
+    .menu h4 {
+        font-size: 16px;
+    }
+
+    .menu {
+        margin-left: 4rem;
+    }
+
+    .copyright p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1320px) {
+    .quote {
+        font-size: 14px;
+    }
+
+    .phone p {
+        font-size: 14px;
+    }
+
+    .menu p,
+    .menu h4 {
+        font-size: 14px;
+    }
+
+    .menu {
+        margin-left: 3rem;
+    }
+
+    .copyright p {
+        font-size: 13px;
+    }
+
+    .phone img {
+        width: 30px;
+    }
+}
+
+@media screen and (max-width: 1120px) {
+    .logo img {
+        width: 80px;
+
+    }
+
+    .logo p {
+        font-size: 16px;
+    }
+
+    .quote {
+        font-size: 12px;
+    }
+
+    .menu p,
+    .menu h4 {
+        font-size: 13px;
+    }
+
+    .menu {
+        margin-left: 2rem;
+    }
+
+    .footer1 {
+        max-width: 200px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .wrapper-footer {
+        display: inline;
+    }
+
+    .footer-flex {
+        display: none;
+    }
+
+    .logo-flex {
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu-mobile p {
+        font-size: 16px;
+        margin-bottom: 1rem;
+    }
+
+    footer {
+        padding: 2rem 5%;
+    }
+
+    .wrapper-mobile {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .contact-p,
+    .number-p {
+        font-size: 16px;
+        margin-bottom: 0.5rem;
+        text-align: center;
+    }
+
+    .number-phone {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .contact-app {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-app img {
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .logo img {
+        width: 70px;
+        padding-right: 0.6rem;
+        margin-right: 0.6rem;
+    }
+
+    .logo p {
+        font-size: 13px;
+    }
+
+    .menu-mobile p {
+        font-size: 14px;
+        margin-bottom: 0.7rem;
+    }
+
+    .contact-p,
+    .number-p {
+        font-size: 14px;
+    }
+
+    .number-phone {
+        font-size: 20px;
+    }
+}
